@@ -32,7 +32,7 @@ This project analyzes the user journey and conversion dynamics of an e-commerce 
 
 ## 📂 Repository Contents
 - `/sql_scripts`: Contains the core queries used for data aggregation and funnel metrics.
-- `/dashboard_preview`: Screenshots of the Power BI visualization.
+
 
 ---
 *Last updated: 2026-04-18*

@@ -48,7 +48,6 @@ For the metric notes, evidence wording, and reuse guidance, see [`results/valida
 This repository now includes a lightweight web dashboard so the project can be presented visually without Power BI:
 
 - [`docs/index.html`](./docs/index.html)
-- [`docs/README.md`](./docs/README.md)
 - Planned GitHub Pages URL: `https://xintongjiang-tech.github.io/bigquery-ecommerce-conversion-analysis/`
 
 The dashboard summarizes the headline metrics, the device gap, the business interpretation, and the recommended actions in a format that works well for portfolio review.

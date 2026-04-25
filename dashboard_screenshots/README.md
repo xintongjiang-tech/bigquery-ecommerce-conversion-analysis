@@ -1,32 +1,7 @@
-# Dashboard Screenshot Guide
+# Dashboard Media
 
-This folder is reserved for exported dashboard images that support the portfolio narrative. The repository currently does not include image assets, so this file defines the recommended screenshot set and naming convention.
+This folder is reserved for visual media associated with the project dashboard.
 
-If you want to build the dashboard from scratch, start with the files in [`powerbi_pack/`](../powerbi_pack/README.md).
+At the current stage, the repository does not include exported image assets. The primary visual presentation is provided through the web dashboard in [`docs/`](../docs/README.md).
 
-## Recommended Screenshot Set
-Export and store the following images here when available:
-
-1. `01-executive-overview.png`
-High-level dashboard summary with the main KPI tiles and funnel headline.
-
-2. `02-funnel-breakdown.png`
-A funnel visual showing the largest stage drop-off from high-intent to completed purchase.
-
-3. `03-device-conversion.png`
-A chart comparing basket-to-purchase or overall conversion by device category.
-
-4. `04-revenue-by-device.png`
-A visual showing that desktop drives the majority of total revenue.
-
-5. `05-next-step-insights.png`
-A slide or dashboard section with business recommendations, hypotheses, or experiment ideas.
-
-## Screenshot Tips
-- Use consistent canvas dimensions so the gallery looks intentional.
-- Prefer clean crops without browser chrome when possible.
-- Keep titles visible in each image so the screenshots can stand on their own.
-- If metrics are reused in interviews, make sure the screenshot numbers match the latest validated query outputs.
-
-## How To Use This Folder In The README
-Once screenshots exist, add a short gallery section to the root README and link directly to the image files. That will make the repository feel more complete and much easier for recruiters or hiring managers to scan quickly.
+If visual exports are added later, they should be stored in this directory as project media files that support the same validated metrics and conclusions shown in the repository.

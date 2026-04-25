@@ -1,32 +1,24 @@
-# Case Study Presentation Pack
+# Case Study
 
-This folder reframes the repository as a polished analytics case study for interviews, portfolio reviews, and recruiter screening.
+This folder contains the formal narrative version of the project. It is designed for portfolio review, hiring evaluation, and stakeholder-style reading.
 
-## What This Folder Is For
-The main README is designed to work as a strong GitHub landing page. This folder goes one step further by packaging the work into a presentation-friendly narrative:
+## Purpose
+The main repository README gives the shortest path to the conclusions and validated metrics. This folder provides a more structured case-study format that explains:
 
-- what the business problem was
-- how the analysis was structured
-- what the headline insights were
-- how AI assistance supported the workflow
-- what actions the business should take next
-
-## Recommended Use
-Use this folder when you need to:
-
-- talk through the project in interviews
-- turn the GitHub repo into a portfolio case study
-- create a PDF or slide deck from the written material
-- show that you can connect SQL outputs to business decisions
+- the business question
+- the analytical method
+- the validated findings
+- the interpretation of those findings
+- the recommended business actions
 
 ## Files
-- [`interview-walkthrough.md`](./interview-walkthrough.md): A concise talk track for presenting the project in an interview or networking conversation.
+- [`executive-case-study.md`](./executive-case-study.md): Formal write-up of the project as a concise analytics case study.
 
-## Best Presentation Flow
-1. Open the main repository README for the headline story.
-2. Use the interview walkthrough to keep the conversation structured.
-3. Show SQL snippets or dashboard screenshots only after the audience understands the business question.
-4. Close with the product and revenue implications, not just the query logic.
+## Recommended Reading Order
+1. Start with the main repository README.
+2. Review the validated metrics in `results/`.
+3. Open the web dashboard in `docs/`.
+4. Use this folder for the longer written case study.
 
 ## Why This Helps
-Many portfolio repositories are technically correct but difficult to present. This folder is meant to reduce that gap by turning the analysis into a narrative with a beginning, middle, and end.
+This structure keeps the repository easy to scan while still providing a polished written narrative for readers who want more context than the homepage alone.

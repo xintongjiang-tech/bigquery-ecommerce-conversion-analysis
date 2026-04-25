@@ -31,10 +31,32 @@ body {
 
 .hero,
 .panel,
-.metric-card {
+.metric-card,
+.topbar {
   background: var(--surface);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
+}
+
+.topbar {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  border-radius: 999px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+
+.topbar a {
+  color: var(--ink);
+  text-decoration: none;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.topbar a:hover {
+  color: var(--accent);
 }
 
 .hero {

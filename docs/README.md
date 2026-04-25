@@ -6,9 +6,9 @@ This folder contains a lightweight static dashboard version of the project.
 - `index.html`: Main dashboard page
 - `styles.css`: Visual styling
 
-## How To View
-- Open `index.html` directly in a browser
-- or enable GitHub Pages for the repository and use this folder as the published source
+## Access
+- Local file: `docs/index.html`
+- GitHub Pages target URL: `https://xintongjiang-tech.github.io/bigquery-ecommerce-conversion-analysis/`
 
 ## What The Dashboard Shows
 - headline metrics

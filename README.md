@@ -12,7 +12,7 @@ If you want to understand this project quickly, use this order:
 2. Open the validated metrics in [`results/validated-metrics.md`](./results/validated-metrics.md).
 3. View the web dashboard in [`docs/index.html`](./docs/index.html).
 4. Review the main SQL files in the repository root.
-5. Use [`case_study/interview-walkthrough.md`](./case_study/interview-walkthrough.md) if you want the interview version.
+5. Open [`case_study/executive-case-study.md`](./case_study/executive-case-study.md) for the formal written case study.
 
 ## Project Goal
 This project analyzes the Google Analytics e-commerce public dataset in BigQuery to understand where users drop off in the purchase funnel, how device behavior affects conversion, and what actions the business should prioritize to recover revenue.
@@ -49,6 +49,7 @@ This repository now includes a lightweight web dashboard so the project can be p
 
 - [`docs/index.html`](./docs/index.html)
 - [`docs/README.md`](./docs/README.md)
+- Planned GitHub Pages URL: `https://xintongjiang-tech.github.io/bigquery-ecommerce-conversion-analysis/`
 
 The dashboard summarizes the headline metrics, the device gap, the business interpretation, and the recommended actions in a format that works well for portfolio review.
 
@@ -74,7 +75,7 @@ Final conclusions are still framed as analyst-reviewed results rather than unver
 ### Read First
 - [`results/validated-metrics.md`](./results/validated-metrics.md)
 - [`docs/index.html`](./docs/index.html)
-- [`case_study/interview-walkthrough.md`](./case_study/interview-walkthrough.md)
+- [`case_study/executive-case-study.md`](./case_study/executive-case-study.md)
 
 ### Analysis And Validation
 - [`advanced_analysis/README.md`](./advanced_analysis/README.md)

@@ -31,8 +31,30 @@ This project analyzes the user journey and conversion dynamics of an e-commerce 
 - **Conversion Optimization**: A/B test the "Order Completed" page loading speed and simplify the mobile payment interface to reduce friction.
 
 ## 📂 Repository Contents
-- `/sql_scripts`: Contains the core queries used for data aggregation and funnel metrics.
+- `final buy.sql`: Core funnel stage query for visitor-to-buyer tracking.
+- `device.sql`: Device-level basket-to-purchase conversion analysis.
+- `final cvr.sql`: Daily conversion and revenue trend query.
+- `hit order.sql`: Page-order level journey exploration.
+- `the whole month of July.sql`: Monthly browsing behavior exploration.
+- `advanced_analysis/`: Extended portfolio materials showing deeper analytics thinking and AI-agent workflow.
+
+## 🧠 Advanced Portfolio Extension
+To make this project stronger as a modern analytics portfolio piece, I added a dedicated extension folder that highlights both deeper business analysis and responsible AI-agent usage:
+
+- [`advanced_analysis/README.md`](./advanced_analysis/README.md): A next-step analytical framework covering segmentation, hypothesis prioritization, KPI design, and experiment planning.
+- [`advanced_analysis/ai-agent-workflow.md`](./advanced_analysis/ai-agent-workflow.md): A practical explanation of how AI agents can accelerate SQL analysis, QA, and stakeholder communication without replacing validation.
+- [`advanced_analysis/sql/deeper_analysis_playbook.sql`](./advanced_analysis/sql/deeper_analysis_playbook.sql): Reusable BigQuery SQL templates for device diagnostics, landing-page quality, basket abandonment, visitor segmentation, and opportunity sizing.
+
+## 💡 Why This Matters
+This project now demonstrates not only SQL execution and dashboard-driven insight generation, but also:
+
+- stronger analytical prioritization
+- clearer business translation
+- reusable investigation design
+- AI-enabled workflow thinking
+
+That combination better reflects how modern analysts operate in real product and business environments.
 
 
 ---
-*Last updated: 2026-04-18*
+*Last updated: 2026-04-25*

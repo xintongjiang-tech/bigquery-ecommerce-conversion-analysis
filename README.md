@@ -43,7 +43,18 @@ To make this project stronger as a modern analytics portfolio piece, I added a d
 
 - [`advanced_analysis/README.md`](./advanced_analysis/README.md): A next-step analytical framework covering segmentation, hypothesis prioritization, KPI design, and experiment planning.
 - [`advanced_analysis/ai-agent-workflow.md`](./advanced_analysis/ai-agent-workflow.md): A practical explanation of how AI agents can accelerate SQL analysis, QA, and stakeholder communication without replacing validation.
+- [`advanced_analysis/validation-and-assumptions.md`](./advanced_analysis/validation-and-assumptions.md): A validation note that separates verified results from assumptions and explains how AI-assisted validation improves correctness and consistency.
 - [`advanced_analysis/sql/deeper_analysis_playbook.sql`](./advanced_analysis/sql/deeper_analysis_playbook.sql): Reusable BigQuery SQL templates for device diagnostics, landing-page quality, basket abandonment, visitor segmentation, and opportunity sizing.
+
+## 🤖 AI-Assisted Analysis
+This project can be credibly positioned as using **Claude Code as an AI assistant** to support:
+
+- SQL query generation
+- debugging and iterative refinement
+- query review for correctness and consistency
+- documentation of analytical assumptions and next-step investigation paths
+
+The strongest claim is not that AI produced the analysis automatically, but that it accelerated the workflow while keeping final validation in analyst-reviewed SQL.
 
 ## 💡 Why This Matters
 This project now demonstrates not only SQL execution and dashboard-driven insight generation, but also:

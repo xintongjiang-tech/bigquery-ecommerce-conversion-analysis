@@ -15,6 +15,7 @@ Those findings remain the foundation of the case study. This extension focuses o
 - A more explicit decision framework for diagnosing the checkout funnel.
 - A prioritization layer that connects observed conversion gaps to business actions.
 - An AI-agent workflow that shows how analysis can be accelerated without replacing validation.
+- A validation layer that distinguishes measured results from unverified claims.
 - Reusable BigQuery SQL templates for deeper segmentation and follow-up investigation.
 
 ## Analytical Deep-Dive Framework
@@ -95,6 +96,7 @@ This extension makes the project more compelling for analytics, product analytic
 
 ## Related Files
 - [AI Agent Workflow](./ai-agent-workflow.md)
+- [Validation And Assumptions](./validation-and-assumptions.md)
 - [SQL Playbook](./sql/deeper_analysis_playbook.sql)
 
 ## Note On Scope

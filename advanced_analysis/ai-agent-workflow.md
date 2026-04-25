@@ -1,6 +1,6 @@
 # AI Agent Workflow For This Analytics Project
 
-This document explains how AI agents can be used to strengthen a data analysis project without weakening analytical rigor. In this project, the AI agent is best positioned as an **analysis copilot**, not as the source of truth.
+This document explains how AI agents can be used to strengthen a data analysis project without weakening analytical rigor. In this project, the AI agent is best positioned as an **analysis copilot**, not as the source of truth. In practice, this repository can be presented as using **Claude Code as an AI assistant** for SQL generation, debugging, iterative refinement, and validation support.
 
 ## Where AI Agents Add Real Value
 
@@ -41,6 +41,8 @@ A high-quality AI-assisted workflow should use the model to review for common an
 - overclaiming causality from descriptive analysis
 
 The model can surface likely mistakes quickly, but final verification still belongs to the analyst.
+
+This is the strongest way to describe **AI-assisted validation** in a portfolio: the model helps check query correctness and consistency, while the analyst remains accountable for final metric definitions.
 
 ### 4. Insight Packaging
 After the SQL is validated, AI agents can help transform raw outputs into:

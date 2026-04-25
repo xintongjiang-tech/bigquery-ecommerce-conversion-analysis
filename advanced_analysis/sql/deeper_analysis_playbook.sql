@@ -174,3 +174,40 @@ FROM device_summary
 ORDER BY basket_sessions DESC;
 
 -- End of playbook.
+
+/*
+Query 6: Funnel stage validation and drop-off accounting
+Purpose:
+- Produce a reproducible visit -> product view -> add to cart -> purchase funnel.
+- Make it easier to validate any future claim about add-to-cart drop-off.
+- Use this query before stating an exact percentage in a README, resume, or interview.
+*/
+WITH funnel_base AS (
+  SELECT
+    CONCAT(fullVisitorId, '-', CAST(visitId AS STRING)) AS session_key,
+    MAX(IF(hits.eCommerceAction.action_type = '2', 1, 0)) AS product_view_flag,
+    MAX(IF(hits.eCommerceAction.action_type = '3', 1, 0)) AS add_to_cart_flag,
+    MAX(IF(totals.transactions IS NOT NULL AND totals.transactions > 0, 1, 0)) AS purchase_flag
+  FROM `bigquery-public-data.google_analytics_sample.ga_sessions_*`,
+  UNNEST(hits) AS hits
+  WHERE _TABLE_SUFFIX BETWEEN '20170801' AND '20170831'
+  GROUP BY 1
+),
+funnel_counts AS (
+  SELECT
+    COUNT(*) AS sessions,
+    SUM(product_view_flag) AS product_view_sessions,
+    SUM(add_to_cart_flag) AS add_to_cart_sessions,
+    SUM(purchase_flag) AS purchase_sessions
+  FROM funnel_base
+)
+SELECT
+  sessions,
+  product_view_sessions,
+  add_to_cart_sessions,
+  purchase_sessions,
+  SAFE_DIVIDE(add_to_cart_sessions, product_view_sessions) AS product_view_to_cart_rate,
+  1 - SAFE_DIVIDE(add_to_cart_sessions, product_view_sessions) AS product_view_to_cart_dropoff_rate,
+  SAFE_DIVIDE(purchase_sessions, add_to_cart_sessions) AS cart_to_purchase_rate,
+  1 - SAFE_DIVIDE(purchase_sessions, add_to_cart_sessions) AS cart_to_purchase_dropoff_rate
+FROM funnel_counts;

@@ -61,6 +61,7 @@ Desktop contributes the overwhelming majority of revenue, reinforcing that devic
 ### Portfolio Extensions
 - [`advanced_analysis/`](./advanced_analysis/README.md): Deep-dive analytical framework, AI workflow, validation notes, and reusable SQL templates
 - [`case_study/`](./case_study/README.md): Interview-ready project narrative and presentation materials
+- [`powerbi_pack/`](./powerbi_pack/README.md): Dashboard build pack with storyboard, DAX measures, and data-model guidance
 - [`dashboard_screenshots/`](./dashboard_screenshots/README.md): Screenshot checklist and gallery structure for dashboard presentation
 
 ## AI-Assisted Analytics Workflow
@@ -108,6 +109,7 @@ If you want to push the project even further, the next highest-value additions w
 - [Deep-Dive SQL Playbook](./advanced_analysis/sql/deeper_analysis_playbook.sql)
 - [Case Study](./case_study/README.md)
 - [Interview Walkthrough](./case_study/interview-walkthrough.md)
+- [Power BI Build Pack](./powerbi_pack/README.md)
 - [Dashboard Screenshot Guide](./dashboard_screenshots/README.md)
 
 ---

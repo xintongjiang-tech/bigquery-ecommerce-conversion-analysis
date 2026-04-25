@@ -2,6 +2,8 @@
 
 This folder is reserved for exported dashboard images that support the portfolio narrative. The repository currently does not include image assets, so this file defines the recommended screenshot set and naming convention.
 
+If you want to build the dashboard from scratch, start with the files in [`powerbi_pack/`](../powerbi_pack/README.md).
+
 ## Recommended Screenshot Set
 Export and store the following images here when available:
 

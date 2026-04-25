@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Conversion Funnel Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Portfolio Dashboard</p>
+          <h1>E-commerce Conversion Funnel Analysis</h1>
+          <p class="summary">
+            A lightweight web dashboard built from the project’s validated headline metrics. It highlights where the funnel breaks, why mobile underperforms, and what actions the business should take next.
+          </p>
+        </div>
+        <div class="hero-note">
+          <h2>Main takeaway</h2>
+          <p>
+            The most urgent issue is not traffic volume. It is lower-funnel checkout efficiency, especially on mobile.
+          </p>
+        </div>
+      </section>
+
+      <section class="metrics-grid">
+        <article class="metric-card">
+          <p class="metric-label">Basket to Purchase Drop-Off</p>
+          <p class="metric-value">79.42%</p>
+          <p class="metric-text">The largest leak happens at the final purchase stage.</p>
+        </article>
+        <article class="metric-card">
+          <p class="metric-label">Desktop Basket-to-Purchase CVR</p>
+          <p class="metric-value">26.89%</p>
+          <p class="metric-text">Desktop users complete checkout much more efficiently.</p>
+        </article>
+        <article class="metric-card">
+          <p class="metric-label">Mobile Basket-to-Purchase CVR</p>
+          <p class="metric-value">8.11%</p>
+          <p class="metric-text">Mobile underperforms desktop by a wide margin.</p>
+        </article>
+        <article class="metric-card">
+          <p class="metric-label">Desktop Revenue Share</p>
+          <p class="metric-value">94.29%</p>
+          <p class="metric-text">Device performance has direct revenue implications.</p>
+        </article>
+      </section>
+
+      <section class="panel two-col">
+        <div>
+          <p class="panel-label">Funnel Interpretation</p>
+          <h2>Where the journey breaks</h2>
+          <p>
+            Users are reaching high purchase intent, but too many fail to complete checkout. That makes basket-to-purchase performance the most important place to investigate.
+          </p>
+          <ul class="clean-list">
+            <li>Traffic is entering the funnel.</li>
+            <li>High-intent activity exists.</li>
+            <li>Final-stage completion is the weakest point.</li>
+          </ul>
+        </div>
+        <div class="funnel-card">
+          <div class="funnel-step step-1">Visitors</div>
+          <div class="funnel-step step-2">Product Viewers</div>
+          <div class="funnel-step step-3">Basket Viewers</div>
+          <div class="funnel-step step-4">Buyers</div>
+          <p class="funnel-note">Largest drop-off: Basket to Purchase</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <p class="panel-label">Device Gap</p>
+        <h2>Desktop vs Mobile</h2>
+        <div class="bars">
+          <div class="bar-row">
+            <div class="bar-meta">
+              <span>Desktop</span>
+              <strong>26.89%</strong>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill desktop" style="width: 89.63%"></div>
+            </div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-meta">
+              <span>Mobile</span>
+              <strong>8.11%</strong>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill mobile" style="width: 27.03%"></div>
+            </div>
+          </div>
+        </div>
+        <p class="panel-footnote">
+          Desktop basket-to-purchase conversion is about 3.3x higher than mobile based on the validated headline metrics used in this project.
+        </p>
+      </section>
+
+      <section class="panel two-col">
+        <div>
+          <p class="panel-label">Recommendations</p>
+          <h2>What the business should do next</h2>
+          <ul class="clean-list">
+            <li>Audit the mobile checkout flow for usability and payment friction.</li>
+            <li>Retarget basket abandoners because they already show strong purchase intent.</li>
+            <li>Segment the funnel further by landing page, traffic source, and visitor type.</li>
+            <li>Validate any new explanation with reproducible SQL before making causal claims.</li>
+          </ul>
+        </div>
+        <div>
+          <p class="panel-label">AI-Assisted Workflow</p>
+          <h2>How AI supported the project</h2>
+          <ul class="clean-list">
+            <li>Drafted and refined SQL from business questions.</li>
+            <li>Helped debug logic and denominator issues.</li>
+            <li>Improved documentation and validation clarity.</li>
+            <li>Accelerated iteration without replacing analyst review.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="footer-note">
+        <p>
+          Source of headline numbers: <a href="../results/validated-metrics.md">validated project metrics</a>.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

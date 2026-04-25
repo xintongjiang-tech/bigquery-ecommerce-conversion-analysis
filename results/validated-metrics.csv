@@ -1,0 +1,5 @@
+metric,value,unit,interpretation,source
+Basket to purchase drop-off,79.42,percent,The largest leak occurs at the final purchase stage,Project analysis summary and funnel results
+Desktop basket-to-purchase conversion,26.89,percent,Desktop users complete checkout at a much higher rate,Device-level conversion analysis
+Mobile basket-to-purchase conversion,8.11,percent,Mobile users convert far less efficiently than desktop users,Device-level conversion analysis
+Desktop share of total revenue,94.29,percent,Revenue is heavily concentrated in desktop traffic,Revenue-by-device analysis

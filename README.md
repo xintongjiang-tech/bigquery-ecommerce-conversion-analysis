@@ -1,116 +1,99 @@
-# E-commerce Conversion Funnel Analysis in BigQuery
+# E-commerce Conversion Funnel Analysis
 
 [![SQL](https://img.shields.io/badge/SQL-Advanced-orange.svg)]()
 [![BigQuery](https://img.shields.io/badge/BigQuery-Google%20Cloud-4285F4.svg)]()
-[![Power BI](https://img.shields.io/badge/Visualization-Power%20BI-F2C811.svg)]()
+[![Dashboard](https://img.shields.io/badge/Dashboard-Web%20Demo-0F766E.svg)]()
 [![AI Assisted](https://img.shields.io/badge/Workflow-Claude%20Code-111111.svg)]()
 
-## Overview
-This project analyzes e-commerce customer behavior in the Google Analytics public dataset using BigQuery SQL and dashboard storytelling. The goal is to understand where users drop off in the purchase funnel, which customer segments underperform, and how analytics can be translated into product and revenue decisions.
+## Start Here
+If you want to understand this project quickly, use this order:
 
-Beyond the core SQL analysis, this repository is structured as a portfolio-ready case study. It highlights not only the final business insights, but also the analytical workflow, validation discipline, and responsible use of AI assistance during SQL generation, debugging, iterative refinement, and documentation.
+1. Read the key conclusions below.
+2. Open the validated metrics in [`results/validated-metrics.md`](./results/validated-metrics.md).
+3. View the web dashboard in [`docs/index.html`](./docs/index.html).
+4. Review the main SQL files in the repository root.
+5. Use [`case_study/interview-walkthrough.md`](./case_study/interview-walkthrough.md) if you want the interview version.
 
-## Business Problem
-E-commerce teams rarely struggle because they lack traffic alone. More often, the real challenge is that users enter the funnel but fail to convert efficiently. This project investigates:
+## Project Goal
+This project analyzes the Google Analytics e-commerce public dataset in BigQuery to understand where users drop off in the purchase funnel, how device behavior affects conversion, and what actions the business should prioritize to recover revenue.
 
-- where the largest funnel leak occurs
-- whether mobile behavior materially underperforms desktop
-- how navigation and session behavior relate to purchase completion
-- which follow-up actions would create the clearest revenue upside
+## Final Conclusions
+The analysis supports three main business conclusions:
 
-## Executive Summary
-The analysis points to a clear conversion efficiency problem in the lower funnel:
+1. The largest bottleneck is late in the funnel, between basket and completed purchase.
+2. Desktop users convert much more efficiently than mobile users.
+3. Revenue is heavily concentrated in desktop traffic, which makes the mobile gap commercially important.
 
-- The largest drop-off occurs between basket and purchase completion.
-- Desktop users convert far more efficiently than mobile users.
-- Revenue contribution is heavily concentrated in desktop traffic.
+These findings suggest that lower-funnel checkout friction, especially on mobile, is a higher-priority issue than top-of-funnel traffic generation.
 
-Taken together, these findings suggest that checkout friction, especially on mobile, is a more urgent business issue than top-of-funnel traffic generation.
+## Data-Backed Metrics
+The repository currently uses these validated headline metrics from the project analysis:
 
-## Key Findings
-1. Basket-to-purchase is the most critical bottleneck.
-The funnel shows a major late-stage drop-off, indicating that many users reach high purchase intent but do not complete checkout.
+| Metric | Value | Why It Matters |
+|---|---:|---|
+| Basket to purchase drop-off | 79.42% | Shows the biggest leak happens at the final purchase stage |
+| Desktop basket-to-purchase conversion | 26.89% | Indicates strong lower-funnel efficiency on desktop |
+| Mobile basket-to-purchase conversion | 8.11% | Signals a material mobile conversion problem |
+| Desktop share of total revenue | 94.29% | Confirms that device performance has real revenue impact |
 
-2. Desktop significantly outperforms mobile.
-Desktop basket-to-purchase conversion is substantially higher than mobile, which points to a likely mobile UX, navigation, or payment-friction problem.
-
-3. Revenue is concentrated in desktop sessions.
-Desktop contributes the overwhelming majority of revenue, reinforcing that device-specific conversion quality is commercially important, not just statistically interesting.
+For the metric notes, evidence wording, and reuse guidance, see [`results/validated-metrics.md`](./results/validated-metrics.md).
 
 ## Recommendations
-- Prioritize a mobile checkout UX audit to identify field friction, payment barriers, and page-speed issues.
-- Retarget basket abandoners because they represent high-intent users with incomplete purchases.
-- Break funnel performance down further by landing page, acquisition source, and visitor type to isolate the highest-value recovery opportunities.
-- Use experiment-driven optimization rather than broad redesign assumptions.
+- Prioritize a mobile checkout UX audit.
+- Retarget basket abandoners because they are high-intent users.
+- Break results down further by landing page, traffic source, and visitor type.
+- Validate follow-up hypotheses with reproducible segment-level queries before making causal claims.
 
-## Tech Stack
-- BigQuery for querying Google Analytics public data
-- SQL for funnel logic, segmentation, aggregation, and validation
-- Power BI for dashboarding and business storytelling
-- Claude Code as an AI assistant for query drafting, debugging, refinement, and validation support
+## Web Dashboard
+This repository now includes a lightweight web dashboard so the project can be presented visually without Power BI:
 
-## Repository Guide
+- [`docs/index.html`](./docs/index.html)
+- [`docs/README.md`](./docs/README.md)
 
-### Core SQL
-- `final buy.sql`: Core funnel stage query for visitor-to-buyer tracking
-- `device.sql`: Device-level basket-to-purchase conversion analysis
-- `final cvr.sql`: Daily conversion and revenue trend query
-- `hit order.sql`: Page-order level journey exploration
+The dashboard summarizes the headline metrics, the device gap, the business interpretation, and the recommended actions in a format that works well for portfolio review.
+
+## Core SQL Files
+- `final buy.sql`: Funnel stage counts for visitors, product viewers, basket viewers, and buyers
+- `device.sql`: Device-level basket-to-purchase conversion and revenue
+- `final cvr.sql`: Daily visitors, sessions, transactions, revenue, and conversion rate
+- `hit order.sql`: Page-order level behavior exploration
 - `the whole month of July.sql`: Monthly browsing behavior exploration
 
-### Portfolio Extensions
-- [`advanced_analysis/`](./advanced_analysis/README.md): Deep-dive analytical framework, AI workflow, validation notes, and reusable SQL templates
-- [`case_study/`](./case_study/README.md): Interview-ready project narrative and presentation materials
-- [`powerbi_pack/`](./powerbi_pack/README.md): Dashboard build pack with storyboard, DAX measures, and data-model guidance
-- [`dashboard_screenshots/`](./dashboard_screenshots/README.md): Screenshot checklist and gallery structure for dashboard presentation
-
-## AI-Assisted Analytics Workflow
-This repository is intentionally positioned as an example of modern analytics work, where AI support improves speed without weakening rigor.
-
+## AI-Assisted Workflow
 Claude Code was used as an AI assistant to support:
 
-- SQL query generation from business questions
-- debugging and iterative refinement of logic
-- review of funnel definitions, denominators, and consistency risks
-- documentation of assumptions, caveats, and next-step analyses
+- SQL query generation
+- debugging and iterative refinement
+- validation review for correctness and consistency
+- documentation of assumptions, caveats, and follow-up analyses
 
-The final analytical claims remain grounded in analyst-reviewed SQL rather than unverified model output.
+Final conclusions are still framed as analyst-reviewed results rather than unverified model output.
 
-## Validation Philosophy
-This project distinguishes between:
+## Repository Structure
 
-- validated observations supported by current SQL logic
-- working hypotheses that require deeper segmentation
-- explanatory narratives that should not be overstated as causal proof
+### Read First
+- [`results/validated-metrics.md`](./results/validated-metrics.md)
+- [`docs/index.html`](./docs/index.html)
+- [`case_study/interview-walkthrough.md`](./case_study/interview-walkthrough.md)
 
-That separation matters in portfolio work because strong analytics is not only about finding an interesting number, but about knowing which claims are fully supported and which still need evidence.
+### Analysis And Validation
+- [`advanced_analysis/README.md`](./advanced_analysis/README.md)
+- [`advanced_analysis/validation-and-assumptions.md`](./advanced_analysis/validation-and-assumptions.md)
+- [`advanced_analysis/sql/deeper_analysis_playbook.sql`](./advanced_analysis/sql/deeper_analysis_playbook.sql)
 
-## Suggested Interview Angle
-If you present this project in interviews, the strongest framing is:
+### Presentation Assets
+- [`case_study/README.md`](./case_study/README.md)
+- [`dashboard_screenshots/README.md`](./dashboard_screenshots/README.md)
+- [`powerbi_pack/README.md`](./powerbi_pack/README.md)
 
-1. Start with the business problem and why conversion efficiency matters.
-2. Walk through the funnel and device-level findings.
-3. Explain how you used SQL to isolate the bottleneck.
-4. Show how AI assistance accelerated query iteration and validation.
-5. Finish with the product and revenue actions the business should prioritize.
+## Notes On Evidence
+This repository now separates:
 
-## Next Best Additions
-If you want to push the project even further, the next highest-value additions would be:
+- validated headline metrics
+- broader analytical recommendations
+- future hypotheses that still need deeper query support
 
-- exported Power BI dashboard screenshots
-- a one-page executive summary slide
-- a saved metrics table that backs every headline figure in the README
-- a short video walkthrough or Loom link
-
-## Project Assets
-- [Advanced Analysis](./advanced_analysis/README.md)
-- [AI Agent Workflow](./advanced_analysis/ai-agent-workflow.md)
-- [Validation and Assumptions](./advanced_analysis/validation-and-assumptions.md)
-- [Deep-Dive SQL Playbook](./advanced_analysis/sql/deeper_analysis_playbook.sql)
-- [Case Study](./case_study/README.md)
-- [Interview Walkthrough](./case_study/interview-walkthrough.md)
-- [Power BI Build Pack](./powerbi_pack/README.md)
-- [Dashboard Screenshot Guide](./dashboard_screenshots/README.md)
+That makes the project easier to trust and easier to explain.
 
 ---
 Last updated: 2026-04-25
